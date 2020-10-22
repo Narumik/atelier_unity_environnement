@@ -626,23 +626,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a1bc65e88aad1e499bae2dd16a2254f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  zoneRepulsion: 5
-  zoneAlignement: 9
+  zoneRepulsion: 100
+  zoneAlignement: 7
   zoneAttraction: 50
-  hauteurSol: 0
   forceRepulsion: 30
-  forceAlignement: 3
-  forceAttraction: 20
-  forceRejetSol: 300
+  forceAlignement: 30
+  forceAttraction: 30
   target: {x: 0, y: 0, z: 0}
-  forceTarget: 15
-  goToTarget: 1
-  stopToTarget: 0
+  forceTarget: 20
+  goToTarget: 0
   velocity: {x: 0, y: 0, z: 0}
-  maxSpeed: 40
-  minSpeed: 10
-  drawGizmos: 0
-  drawLines: 0
+  maxSpeed: 20
+  minSpeed: 12
+  drawGizmos: 1
+  drawLines: 1
 --- !u!4 &533271093 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4350637029938684, guid: 8a98dc7c3255b1f43b1885fecabf80f2,
@@ -970,11 +967,8 @@ MonoBehaviour:
   startSpeed: 1
   startSpread: 10
   maxDistBoids: 30
-  hauteurSol: 0
   periodRetargetBoids: 7
   periodNoTargetBoids: 4
-  periodLandedBoids: 6
-  setBirdView: 0
 --- !u!4 &822979778
 Transform:
   m_ObjectHideFlags: 0
@@ -1171,7 +1165,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1405285786}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 22.041733, y: -2.9930034, z: 33.611294}
+  m_LocalPosition: {x: 4.5, y: 2.3, z: 1.6}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 118250742}

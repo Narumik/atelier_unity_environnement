@@ -5,24 +5,20 @@ using UnityEngine;
 public class Boid : MonoBehaviour
 {
     public float zoneRepulsion = 5;
-    public float zoneAlignement = 9;
+    public float zoneAlignement = 7;
     public float zoneAttraction = 50;
-    public float hauteurSol = 0;
 
-    public float forceRepulsion = 15;
-    public float forceAlignement = 3;
-    public float forceAttraction = 20;
-    public float forceRejetSol = 100;
+    public float forceRepulsion = 30;
+    public float forceAlignement = 30;
+    public float forceAttraction = 30;
 
     public Vector3 target = new Vector3();
-    public float forceTarget = 15;
+    public float forceTarget = 20;
     public bool goToTarget = false;
-    public bool stopToTarget = false;
-    private bool atTarget = false;
 
     public Vector3 velocity = new Vector3();
     public float maxSpeed = 20;
-    public float minSpeed = 10;
+    public float minSpeed = 12;
 
     public bool drawGizmos = true;
     public bool drawLines = true;
@@ -85,31 +81,15 @@ public class Boid : MonoBehaviour
         //On fait la moyenne des forces, ce qui nous rend indépendant du nombre de boids
         sumForces /= nbForcesApplied;
 
-        //On ajoute le rejet du sol
-        float distSol = Mathf.Max(0,transform.position.y - hauteurSol);
-        if (distSol < 5)
-        {
-            float forceRejet = Mathf.Pow(1.0f - (distSol / 5), 2) * forceRejetSol;
-            sumForces += new Vector3(0, forceRejet, 0);
-        }
-
         //Si on a une target, on l'ajoute
-        float distToTarget = 0;
         if (goToTarget)
         {
             Vector3 vecToTarget = target - transform.position;
-            distToTarget = vecToTarget.magnitude;
-            if (distToTarget < 0.5f)
-            {
+            if (vecToTarget.sqrMagnitude < 1)
                 goToTarget = false;
-                atTarget = true;
-            }
             else
             {
-                atTarget = false;
                 Vector3 forceToTarget = vecToTarget.normalized * forceTarget;
-                if (distToTarget < 5 && stopToTarget)
-                    forceToTarget *= 10;
                 sumForces += forceToTarget;
                 colorDebugForce += Color.magenta;
                 nbForcesApplied++;
@@ -133,12 +113,6 @@ public class Boid : MonoBehaviour
             velocity = velocity.normalized * maxSpeed;
         if (velocity.sqrMagnitude < minSpeed * minSpeed)
             velocity = velocity.normalized * minSpeed;
-
-        //Si on doit freiner sur la cible, on limite la vitesse
-        if ((goToTarget || atTarget) && stopToTarget)
-            if (distToTarget < 3)
-                velocity = velocity.normalized * distToTarget/10.0f;
-
 
         //On regarde dans la bonne direction        
         if (velocity.sqrMagnitude > 0)

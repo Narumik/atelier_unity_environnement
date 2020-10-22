@@ -12,6 +12,6 @@ public class CameraMove : MonoBehaviour
     void Update()
     {
         transform.position += transform.forward * Time.deltaTime * vitesseAvance;
-        ///transform.rotation = Quaternion.AngleAxis(vitesseTourne * Time.deltaTime, Vector3.up) * transform.rotation;
+        transform.rotation = Quaternion.AngleAxis(-vitesseTourne * Time.deltaTime, Vector3.up) * transform.rotation;
     }
 }

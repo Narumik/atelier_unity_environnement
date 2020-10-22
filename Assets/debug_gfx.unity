@@ -366,7 +366,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 466016, guid: f657c58adb4c219419ae056411d88e27, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -41.5
+      value: -41.41
       objectReference: {fileID: 0}
     - target: {fileID: 466016, guid: f657c58adb4c219419ae056411d88e27, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1127,7 +1127,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 466016, guid: f657c58adb4c219419ae056411d88e27, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -41.84
+      value: -41.45
       objectReference: {fileID: 0}
     - target: {fileID: 466016, guid: f657c58adb4c219419ae056411d88e27, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1463,7 +1463,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 466016, guid: f657c58adb4c219419ae056411d88e27, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -40.99
+      value: -41.41
       objectReference: {fileID: 0}
     - target: {fileID: 466016, guid: f657c58adb4c219419ae056411d88e27, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2140,6 +2140,31 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: 0.004
+      objectReference: {fileID: 0}
+    - target: {fileID: 290294694768258856, guid: 82a90b596efc99149bcc8d405acfc982,
+        type: 3}
+      propertyPath: m_DrawTreesAndFoliage
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 290294694768258856, guid: 82a90b596efc99149bcc8d405acfc982,
+        type: 3}
+      propertyPath: m_BakeLightProbesForTrees
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 290294694768258856, guid: 82a90b596efc99149bcc8d405acfc982,
+        type: 3}
+      propertyPath: m_DrawHeightmap
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 290294694768258856, guid: 82a90b596efc99149bcc8d405acfc982,
+        type: 3}
+      propertyPath: m_HeightmapPixelError
+      value: 125.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 290294694768258856, guid: 82a90b596efc99149bcc8d405acfc982,
+        type: 3}
+      propertyPath: m_SplatMapDistance
+      value: 80
       objectReference: {fileID: 0}
     - target: {fileID: 3422731747772540347, guid: 82a90b596efc99149bcc8d405acfc982,
         type: 3}
